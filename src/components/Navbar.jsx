@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <a href="#home" className="flex items-center">
-            <img src="/image/ET.png" alt="Logo" className="h-10 w-auto border-2 border-cyan-400 rounded bg-gray-800 p-1" />
+            <img src="image/ET.png" alt="Logo" className="h-10 w-auto border-2 border-cyan-400 rounded bg-gray-800 p-1" />
           </a>
           <span className="text-xl font-bold ml-2 tracking-wider select-none text-cyan-400 drop-shadow">{`<Edward />`}</span>
         </div>

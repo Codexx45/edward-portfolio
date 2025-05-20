@@ -106,7 +106,7 @@ return (
     {/* Right Side */}
         <div className="flex-1 relative overflow-hidden flex items-center justify-center h-1/2 md:h-full">
             <img
-                src="/image/right.png"
+                src="image/right.png"
                 alt="Right Side"
                 className="w-full h-full object-contain md:object-cover max-h-full"
             />
@@ -118,7 +118,7 @@ return (
             {/* Left Side: Image */}
             <div className="flex-1 flex justify-center">
             <img
-                src="/image/aboutme.jpg"
+                src="image/aboutme.jpg"
                 alt="About Me"
                 className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-2xl border-4 border-cyan-500"
             />
@@ -230,14 +230,14 @@ return (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
                 {/* Certificate 1 */}
                 <div className="flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-lg border-2 border-transparent hover:border-cyan-400 transition-all duration-300 p-6">
-                    <img src="/image/certificates/Capture.PNG" alt="Certificate 1" className="w-full h-40 object-contain mb-4 rounded-lg bg-gray-800" />
+                    <img src="image/certificates/Capture.PNG" alt="Certificate 1" className="w-full h-40 object-contain mb-4 rounded-lg bg-gray-800" />
                     <h3 className="text-lg font-bold text-cyan-400 font-mono mb-2">HTML and CSS Certificate</h3>
                     <p className="text-gray-300 text-sm font-mono mb-2">Issued by Certiport • 2025</p>
                     <a href="#" className="text-cyan-400 font-mono underline text-sm hover:text-white">View Credential</a>
                 </div>
                 {/* Certificate 2 */}
                 <div className="flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-400 transition-all duration-300 p-6">
-                    <img src="/image/certificates/Capture1.PNG" alt="Certificate 2" className="w-full h-40 object-contain mb-4 rounded-lg bg-gray-800" />
+                    <img src="image/certificates/Capture1.PNG" alt="Certificate 2" className="w-full h-40 object-contain mb-4 rounded-lg bg-gray-800" />
                     <h3 className="text-lg font-bold text-blue-400 font-mono mb-2">Responsive Web Desig</h3>
                     <p className="text-gray-300 text-sm font-mono mb-2">Issued by FreeCodeCamp • 2019</p>
                     <a href="#" className="text-blue-400 font-mono underline text-sm hover:text-white">View Credential</a>
