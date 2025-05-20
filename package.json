@@ -8,17 +8,11 @@
   
   "type": "module",
   
-  "homepage": "https://Codexx45.github.io/Myportfolio",
+  "homepage": "https://Codexx45.github.io/Myportfolio/",
   
   "scripts": {
   
-    
-  "predeploy": "npm run build",
-  
-    
-  "deploy": "gh-pages -d dist",
-  
-    
+
   "dev": "vite",
   
     
@@ -28,8 +22,14 @@
   "lint": "eslint .",
   
     
-  "preview": "vite preview"
+  "preview": "vite preview",
   
+
+  "predeploy": "npm run build",
+  
+    
+  "deploy": "gh-pages -d dist"
+
   },
   
   "dependencies": {
