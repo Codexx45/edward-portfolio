@@ -2,13 +2,13 @@
   
   "name": "myportfolio",
   
-  "private": true,
+  "private": false,
   
   "version": "0.0.0",
   
   "type": "module",
   
-  "homepage": "https://Codexx45.github.io/Myportfolio/",
+  "homepage": "https://Codexx45.github.io/bedward-portfolio/",
   
   "scripts": {
   
