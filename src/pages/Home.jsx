@@ -1,3 +1,4 @@
+import { Typewriter } from 'react-simple-typewriter';
 import ProjectModal from '../components/ProjectModal';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -74,9 +75,18 @@ return (
                 </svg>
                 Hi! I'm Edward Shildon Tenchavez
             </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg font-mono">
-                <span className="text-cyan-400">{'<Freelance />'}</span>{' '}
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text text-transparent">Web Developer</span>
+            <h1 className="text-5xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
+            {'<'}
+            <Typewriter
+                words={['Freelance', 'Full-Stack', 'React', 'Laravel', 'PHP']}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}
+            />
+            {'/> Web Developer'}
             </h1>
             <p className="text-gray-300 max-w-lg text-lg font-mono font-medium drop-shadow gap-2">
                 Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
