@@ -248,7 +248,7 @@ return (
                 {/* Certificate 2 */}
                 <div className="flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-lg border-2 border-transparent hover:border-blue-400 transition-all duration-300 p-6">
                     <img src="image/certificates/Capture1.PNG" alt="Certificate 2" className="w-full h-40 object-contain mb-4 rounded-lg bg-gray-800" />
-                    <h3 className="text-lg font-bold text-blue-400 font-mono mb-2">Responsive Web Desig</h3>
+                    <h3 className="text-lg font-bold text-blue-400 font-mono mb-2">Responsive Web Design</h3>
                     <p className="text-gray-300 text-sm font-mono mb-2">Issued by FreeCodeCamp • 2019</p>
                     <a href="#" className="text-blue-400 font-mono underline text-sm hover:text-white">View Credential</a>
                 </div>
