@@ -78,7 +78,7 @@ return (
             <h1 className="text-5xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
             {'<'}
             <Typewriter
-                words={['Freelance', 'Full-Stack', 'React', 'Laravel', 'PHP']}
+                words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
                 loop={0}
                 cursor
                 cursorStyle="_"
@@ -160,7 +160,7 @@ return (
                 <span className="bg-cyan-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">JavaScript</span>
                 <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">React</span>
                 <span className="bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Node.js</span>
-                <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootsrap</span>
+                <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootstrap</span>
                 <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Tailwind CSS</span>
                 <span className="bg-pink-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Laravel</span>
                 <span className="bg-yellow-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">PHP</span>
