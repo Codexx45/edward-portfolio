@@ -6,59 +6,18 @@ import { faArrowRight, faDatabase, faDownload, faPlus} from '@fortawesome/free-s
 import { faGithub, faJs, faNode, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap';
 import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
+import {
+  filFoodImages,
+  apluzImages,
+  juanderFoodImages,
+  lostAndFoundImages,
+  wavesReservationImages
+} from "../data/projectImages";
+
+import { handleDownload, scrollToFooter } from "../utils/helpers";
 
 export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
-
-  const filfoodImages = [
-    'image/Filfood/Capture.PNG',
-    'image/Filfood/Capture1.PNG',
-    'image/Filfood/Capture2.PNG',
-    'image/Filfood/Capture3.PNG',
-    'image/Filfood/Capture4.PNG',
-    'image/Filfood/Capture5.PNG',
-    'image/Filfood/Capture6.PNG',
-    'image/Filfood/Capture7.PNG',
-    'image/Filfood/Capture8.PNG',
-    'image/Filfood/Capture9.PNG',
-    'image/Filfood/Capture10.PNG'
-  ];
-
-  const apluzImages = [
-    'image/Apluz/Capture.PNG',
-    'image/Apluz/Capture1.PNG',
-    'image/Apluz/Capture2.PNG',
-    'image/Apluz/Capture3.PNG',
-    'image/Apluz/Capture4.PNG',
-    'image/Apluz/Capture5.PNG',
-    'image/Apluz/Capture6.PNG',
-    'image/Apluz/Capture7.PNG',
-    'image/Apluz/Capture8.PNG',
-    'image/Apluz/Capture9.PNG',
-    'image/Apluz/Capture10.PNG',
-    'image/Apluz/Capture11.PNG',
-    'image/Apluz/Capture12.PNG',
-    'image/Apluz/Capture13.PNG',
-    'image/Apluz/Capture14.PNG'
-  ];
-  const juanderfoodImages = [
-    'image/JuanderFood/1.PNG',
-    'image/JuanderFood/2.PNG',
-    'image/JuanderFood/3.PNG',
-    'image/JuanderFood/4.PNG',
-    'image/JuanderFood/5.PNG',
-    'image/JuanderFood/6.PNG'
-  ];
-  const lostandfoundImages = [
-    'image/LostandFound/Capture.PNG',
-    'image/LostandFound/Capture1.PNG',
-    'image/LostandFound/Capture2.PNG',
-    'image/LostandFound/Capture3.PNG',
-    'image/LostandFound/Capture4.PNG',
-    'image/LostandFound/Capture5.PNG',
-    'image/LostandFound/Capture6.PNG',
-    'image/LostandFound/Capture7.PNG'
-  ];
 return (
     <>
     <section id='home' className="flex flex-col md:flex-row h-screen w-full bg-gradient-to-br from-gray-900 via-gray-950 to-black">
@@ -78,7 +37,7 @@ return (
             <h1 className="text-5xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
             {'<'}
             <Typewriter
-                words={['Freelance', 'Full-Stack', 'React', 'Laravel', 'PHP']}
+                words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
                 loop={0}
                 cursor
                 cursorStyle="_"
@@ -92,13 +51,13 @@ return (
                 Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
             </p>
             <div className="flex flex-wrap gap-4">
-                <button className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
+                <button onClick={scrollToFooter} className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
                    <FontAwesomeIcon icon={faPlus} size="1x"/>
                     Hire Me
                 </button>
-                <button className="border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
+                <button onClick={handleDownload} className="border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
                     <FontAwesomeIcon icon={faDownload} size="1x"/>
-                    Download CV
+                    Download Resume
                 </button>
             </div>
             {/* Tech Stack Icons */}
@@ -160,7 +119,7 @@ return (
                 <span className="bg-cyan-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">JavaScript</span>
                 <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">React</span>
                 <span className="bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Node.js</span>
-                <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootsrap</span>
+                <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootstrap</span>
                 <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Tailwind CSS</span>
                 <span className="bg-pink-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Laravel</span>
                 <span className="bg-yellow-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">PHP</span>
@@ -278,7 +237,7 @@ return (
                         <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">MySQL</span>
                         <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">Bootstrap</span>
                     </div>
-                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('filfood');}}
+                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('filFood');}}
                         className="inline-block mt-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-white px-5 py-2 rounded-full font-mono font-bold shadow-lg hover:scale-105 transition-transform duration-200"
                     >
                         <span className="flex items-center gap-2">
@@ -332,7 +291,7 @@ return (
                         <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">PHP</span>
                         <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">Bootstrap</span>
                     </div>
-                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('juanderfood');}}
+                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('juanderFood');}}
                         className="inline-block mt-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-white px-5 py-2 rounded-full font-mono font-bold shadow-lg hover:scale-105 transition-transform duration-200"
                     >
                         <span className="flex items-center gap-2">
@@ -358,7 +317,37 @@ return (
                         <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">Flutter</span>
                         <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">Firebase</span>
                     </div>
-                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('lostandfound');}}
+                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('lostAndFound');}}
+                        className="inline-block mt-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-white px-5 py-2 rounded-full font-mono font-bold shadow-lg hover:scale-105 transition-transform duration-200"
+                    >
+                        <span className="flex items-center gap-2">
+                            <FontAwesomeIcon icon={faArrowRight} size="1x" />
+                            View
+                        </span>
+                    </a>
+                </div>
+                <div className="absolute -top-8 -left-8 w-24 h-24 bg-indigo-500 opacity-20 rounded-full blur-2xl"></div>
+            </div>
+
+            {/* Project 5 */}
+            <div className="flex flex-col group bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden border-2 border-transparent hover:border-indigo-400 hover:shadow-indigo-500/30 transition-all duration-300 relative h-full">
+                <div className="overflow-hidden">
+                    <img src="image/WavesReservation/Capture.PNG" alt="Waves Reservation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="flex flex-col flex-1 p-6 space-y-4 relative z-10">
+                    <h3 className="text-xl font-bold text-indigo-400 font-mono group-hover:text-white transition-colors">Waves Reservation</h3>
+                    <p className="text-gray-300 text-sm font-mono flex-1">
+                        A reservation management system for cottages and tables, featuring real-time availability, billing, and down payment tracking.
+                    </p>
+                    <div className="flex flex-wrap items-center gap-2">
+                        <span className="bg-red-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">Laravel</span>
+                        <span className="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">SQLite</span>
+                        <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">CSS</span>
+                        <span className="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-mono shadow">Tailwind</span><br/>
+                        <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-mono shadow">JavaScript</span>
+
+                    </div>
+                    <a href="#" onClick={(e) => {e.preventDefault(); setActiveModal('wavesReservation');}}
                         className="inline-block mt-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-white px-5 py-2 rounded-full font-mono font-bold shadow-lg hover:scale-105 transition-transform duration-200"
                     >
                         <span className="flex items-center gap-2">
@@ -376,14 +365,16 @@ return (
     {/* Modal Component for Projects*/}
     <ProjectModal
     images={
-        activeModal === 'filfood'
-        ? filfoodImages
+        activeModal === 'filFood'
+        ? filFoodImages
         : activeModal === 'apluz'
         ? apluzImages
-        : activeModal === 'juanderfood'
-        ? juanderfoodImages
-        : activeModal === 'lostandfound'
-        ? lostandfoundImages
+        : activeModal === 'juanderFood'
+        ? juanderFoodImages
+        : activeModal === 'lostAndFound'
+        ? lostAndFoundImages
+        : activeModal === 'wavesReservation'
+        ? wavesReservationImages
         : []
     }
     isOpen={!!activeModal}

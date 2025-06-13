@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white py-14 px-4 shadow-inner relative overflow-hidden">
+    <footer  id="contact" className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white py-14 px-4 shadow-inner relative overflow-hidden">
       {/* Decorative Blobs */}
       <div className="absolute -top-10 -left-10 w-48 h-48 bg-cyan-600 opacity-20 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
       <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-500 opacity-20 rounded-full blur-2xl animate-pulse pointer-events-none"></div>
@@ -46,7 +46,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Codexx45/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
