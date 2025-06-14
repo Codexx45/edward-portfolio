@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFolder, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
               <a href="tel:+639156843668" className="hover:underline hover:text-cyan-400 transition-colors">+63 915-684-3668</a>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <FontAwesomeIcon icon={faFolder}/>
+              <FontAwesomeIcon icon={faEnvelope}/>
               <span className="font-semibold text-cyan-200">Email:</span>
               <a href="mailto:edwardshildon081@gmail.com" className="hover:underline hover:text-cyan-400 transition-colors">edwardshildon081@gmail.com</a>
             </div>
