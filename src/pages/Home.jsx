@@ -7,6 +7,7 @@ import { faGithub, faJs, faNode, faReact } from '@fortawesome/free-brands-svg-ic
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap';
 import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
 import ComputersCanvas from "../components/canvas/Computers";
+import StarsCanvas from "../components/canvas/Stars";
 import {
   filFoodImages,
   apluzImages,
@@ -80,10 +81,11 @@ return (
     </div>
     </section>
 
-    <section id="about" className="min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
+    <section id="about" className="relative min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
+          <StarsCanvas />
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             {/* Left Side: Image */}
-            <div className="flex-1 flex justify-center">
+            <div className="flex-1 flex justify-center z-5">
             <img
                 src="image/aboutme.jpg"
                 alt="About Me"
@@ -214,11 +216,12 @@ return (
         </div>
     </section>
 
-    <section id="projects" className="min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
-        <div className="max-w-6xl mx-auto space-y-12">
-            <h2 className="text-4xl font-bold text-cyan-400 font-mono text-center">Projects</h2>
+   <section id="projects" className="relative min-h-screen w-full bg-black text-white px-6 md:px-16 py-20 overflow-hidden">
+    <StarsCanvas />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
+    <div className="relative z-10 max-w-6xl mx-auto space-y-12">
+        <h2 className="text-4xl font-bold text-cyan-400 font-mono text-center">Projects</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
             {/* Project 1 */}
             <div className="flex flex-col group bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-3xl shadow-2xl overflow-hidden border-2 border-transparent hover:border-cyan-400 hover:shadow-cyan-500/30 transition-all duration-300 relative h-full">
                 <div className="overflow-hidden">

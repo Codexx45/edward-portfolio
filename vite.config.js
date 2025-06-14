@@ -8,5 +8,15 @@ export default defineConfig({
     tailwindcss(),
     react()
   ],
+   build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          three: ['three'],
+          react: ['react', 'react-dom'],
+        },
+      },
+    },
+  },
   base: '/edward-portfolio/',
 })
