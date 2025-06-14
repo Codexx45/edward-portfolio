@@ -36,7 +36,7 @@ return (
         Hi! I'm Edward
         </span>
 
-        <h1 className="text-xl md:text-2xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
+        <h1 className="text-xl md:text-3xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
         {'I do '}
         <Typewriter
             words={['Web Development', 'UI/UX Design', 'System Development']}
