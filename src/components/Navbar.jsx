@@ -24,11 +24,11 @@ export default function Navbar() {
         </button>
         {/* Desktop menu */}
         <ul className="hidden md:flex space-x-8">
-          <li><a href="#home" className="hover:text-cyan-200 transition-colors duration-200">{`<Home />`}</a></li>
-          <li><a href="#about" className="hover:text-cyan-200 transition-colors duration-200">{`<AboutMe />`}</a></li>
-          <li><a href="#certificates" className="hover:text-cyan-200 transition-colors duration-200">{`<Certificates />`}</a></li>
-          <li><a href="#services" className="hover:text-cyan-200 transition-colors duration-200">{`<Services />`}</a></li>
-          <li><a href="#projects" className="hover:text-cyan-200 transition-colors duration-200">{`<Projects />`}</a></li>
+          <li><a href="#home" className="hover:text-cyan-200 transition-colors duration-200">{`Home`}</a></li>
+          <li><a href="#about" className="hover:text-cyan-200 transition-colors duration-200">{`AboutMe`}</a></li>
+          <li><a href="#certificates" className="hover:text-cyan-200 transition-colors duration-200">{`Certificates`}</a></li>
+          <li><a href="#services" className="hover:text-cyan-200 transition-colors duration-200">{`Services`}</a></li>
+          <li><a href="#projects" className="hover:text-cyan-200 transition-colors duration-200">{`Projects`}</a></li>
         </ul>
       </div>
       {/* Mobile menu */}
