@@ -3,7 +3,7 @@ import { Typewriter } from 'react-simple-typewriter';
 import ProjectModal from '../components/ProjectModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faDatabase, faDownload, faPlus} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faJs, faNode, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faJava, faJs, faNode, faPython, faReact, faRProject } from '@fortawesome/free-brands-svg-icons';
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap';
 import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
 import ComputersCanvas from "../components/canvas/Computers";
@@ -73,6 +73,9 @@ return (
         <FontAwesomeIcon icon={faLaravel} size="2x" />
         <FontAwesomeIcon icon={faGithub} size="2x" />
         <FontAwesomeIcon icon={faDatabase} size="2x" />
+        <FontAwesomeIcon icon={faPython} size="2x" />
+        <FontAwesomeIcon icon={faRProject} size="2x" />
+        <FontAwesomeIcon icon={faJava} size="2x" />
         </div>
     </div>
     </section>
@@ -102,9 +105,11 @@ return (
             <p className="text-gray-300 text-lg leading-relaxed font-mono z-10">
                 I'm <span className="text-cyan-400 font-bold">Edward Shildon Tenchavez</span>, a dedicated 
                 <span className="text-indigo-400"> Full-Stack Web Developer</span> passionate about building 
-                responsive, high-performance web applications. I studied <span className="text-cyan-300 font-semibold">BS Computer Science </span> 
+                responsive, high-performance web applications. I studied <span className="text-cyan-300 font-semibold">BS Computer Science</span> 
                 at the <span className="text-cyan-300 font-semibold">University of Mindanao</span>, where I built a strong foundation in modern web technologies.
-                I specialize in JavaScript, React, Node.js, Laravel, PHP, Bootstrap, Tailwind CSS, MySQL, and SQLite—transforming ideas into clean, efficient, and scalable code.
+                I specialize in JavaScript, React, Node.js, Laravel, PHP, Bootstrap, Tailwind CSS, MySQL, and SQLite—transforming ideas into clean, efficient, and scalable code. 
+                I also utilize <span className="text-yellow-300 font-semibold">Python</span> and <span className="text-pink-300 font-semibold">RStudio</span> for statistical analysis and data-driven development, 
+                bridging the gap between software engineering and data science.
             </p>
 
             <p className="text-gray-400 text-md font-mono z-10">
@@ -112,15 +117,18 @@ return (
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2 z-10">
-                <span className="bg-cyan-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">JavaScript</span>
-                <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">React</span>
-                <span className="bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Node.js</span>
-                <span className="bg-red-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootstrap</span>
-                <span className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Tailwind CSS</span>
-                <span className="bg-pink-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Laravel</span>
-                <span className="bg-yellow-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">PHP</span>
+                <span className="bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-mono shadow">JavaScript</span>
+                <span className="bg-sky-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">React</span>
+                <span className="bg-emerald-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Node.js</span>
+                <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootstrap</span>
+                <span className="bg-cyan-500 text-black px-4 py-1 rounded-full text-sm font-mono shadow">Tailwind</span>
+                <span className="bg-rose-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Laravel</span>
+                <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-mono shadow">PHP</span>
                 <span className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">MySQL</span>
-                <span className="bg-gray-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">SQLite</span>
+                <span className="bg-zinc-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">SQLite</span>
+                <span className="bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">JAVA</span>
+                <span className="bg-blue-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Python</span>
+                <span className="bg-pink-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">R-project</span>
             </div>
             </div>
         </div>
