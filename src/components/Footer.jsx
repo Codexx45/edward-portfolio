@@ -1,3 +1,4 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMailForward, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
