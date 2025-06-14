@@ -10,7 +10,7 @@ export default function Navbar() {
           <a href="#home" className="flex items-center">
             <img src="image/ET.png" alt="Logo" className="h-10 w-auto border-2 border-cyan-400 rounded bg-gray-800 p-1" />
           </a>
-          <span className="text-xl font-bold ml-2 tracking-wider select-none text-cyan-400 drop-shadow">{`<Edward />`}</span>
+          <span className="text-xl font-bold ml-2 tracking-wider select-none text-cyan-400 drop-shadow">{`Edward`}</span>
         </div>
         {/* Hamburger menu button */}
         <button
@@ -34,11 +34,11 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <ul className="md:hidden flex flex-col space-y-4 mt-4 px-4 py-4 text-center rounded shadow font-mono">
-          <li><a href="#home" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`<Home />`}</a></li>
-          <li><a href="#about" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`<AboutMe />`}</a></li>
-          <li><a href="#certificates" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`<Certificates />`}</a></li>
-          <li><a href="#services" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`<Services />`}</a></li>
-          <li><a href="#projects" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`<Projects />`}</a></li>
+          <li><a href="#home" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Home`}</a></li>
+          <li><a href="#about" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`AboutMe`}</a></li>
+          <li><a href="#certificates" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Certificates`}</a></li>
+          <li><a href="#services" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Services`}</a></li>
+          <li><a href="#projects" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Projects`}</a></li>
         </ul>
       )}
     </nav>
