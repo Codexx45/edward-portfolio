@@ -108,7 +108,7 @@ return (
                 responsive, high-performance web applications. I studied <span className="text-cyan-300 font-semibold">BS Computer Science</span> 
                 at the <span className="text-cyan-300 font-semibold">University of Mindanao</span>, where I built a strong foundation in modern web technologies.
                 I specialize in JavaScript, React, Node.js, Laravel, PHP, Bootstrap, Tailwind CSS, MySQL, and SQLite—transforming ideas into clean, efficient, and scalable code. 
-                I also utilize <span className="text-yellow-300 font-semibold">Python</span> and <span className="text-pink-300 font-semibold">RStudio</span> for statistical analysis and data-driven development, 
+                I also utilize Python and RStudio for statistical analysis and data-driven development, 
                 bridging the gap between software engineering and data science.
             </p>
 
