@@ -31,7 +31,7 @@ return (
     </div>
 
     {/* Content above the canvas */}
-    <div className="relative z-10 flex flex-col justify-center h-full px-10 text-white space-y-8 pointer-events-auto md:pointer-events-none">
+    <div className="relative z-10 flex flex-col justify-center h-full px-10 text-white space-y-8 pointer-events-auto sm:pointer-events-none">
         <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black px-5 py-2 rounded-full w-fit font-mono font-extrabold shadow-lg text-lg animate-bounce flex items-center gap-2">
         <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
@@ -39,7 +39,7 @@ return (
         Hi! I'm Edward Shildon Tenchavez
         </span>
 
-        <h1 className="text-xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
+        <h1 className="text-l md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
         {'<'}
         <Typewriter
             words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
