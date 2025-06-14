@@ -47,7 +47,6 @@ return (
             deleteSpeed={50}
             delaySpeed={1500}
         />
-        {'/> Web Developer'}
         </h1>
 
         <p className="text-gray-300 max-w-lg text-lg font-mono font-medium drop-shadow gap-2">
