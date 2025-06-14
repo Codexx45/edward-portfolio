@@ -60,7 +60,7 @@ return (
         </button>
         <button onClick={handleDownload} className="pointer-events-auto border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
             <FontAwesomeIcon icon={faDownload} size="1x" />
-            Download Resumes
+            Download Resume
         </button>
         </div>
 
