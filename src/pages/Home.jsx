@@ -32,7 +32,7 @@ return (
                 <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
                 </svg>
-                Hi! I'm Edward Shildon Tenchavezs
+                Hi! I'm Edward Shildon Tenchavez
             </span>
             <h1 className="text-5xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
             {'<'}
