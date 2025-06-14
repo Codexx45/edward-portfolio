@@ -53,14 +53,14 @@ return (
         Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
         </p>
 
-        <div className="flex flex-wrap gap-4 pointer-events-none">
+        <div className="flex flex-wrap gap-4 pointer-events-auto">
         <button onClick={scrollToFooter} className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
             <FontAwesomeIcon icon={faPlus} size="1x" />
             Hire Me
         </button>
-        <button onClick={handleDownload} className="pointer-events-none border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
+        <button onClick={handleDownload} className="pointer-events-auto border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
             <FontAwesomeIcon icon={faDownload} size="1x" />
-            Download Resume
+            Download Resumes
         </button>
         </div>
 
