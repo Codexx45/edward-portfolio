@@ -33,13 +33,13 @@ return (
     {/* Content above the canvas */}
     <div className="relative z-10 flex flex-col justify-center h-full px-10 text-white space-y-8 pointer-events-auto sm:pointer-events-none">
         <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black px-5 py-2 rounded-full w-fit font-mono font-extrabold shadow-lg text-l md:text-xl animate-bounce flex items-center gap-2">
-        Hi! I'm Edward Shildon Tenchavez
+        Hi! I'm Edward
         </span>
 
         <h1 className="text-2xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
-        {'<'}
+        {'I do '}
         <Typewriter
-            words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
+            words={['Web Development', 'UI/UX Design', 'System Development']}
             loop={0}
             cursor
             cursorStyle="_"
