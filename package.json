@@ -47,6 +47,9 @@
   "@fortawesome/react-fontawesome": "^0.2.2",
   
     
+  "@react-three/drei": "^10.2.0",
+  
+    
   "@tailwindcss/vite": "^4.1.7",
   
     

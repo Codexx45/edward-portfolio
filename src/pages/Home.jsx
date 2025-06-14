@@ -1,11 +1,12 @@
+import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import ProjectModal from '../components/ProjectModal';
-import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faDatabase, faDownload, faPlus} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faJs, faNode, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap';
 import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
+import ComputersCanvas from "../components/canvas/Computers";
 import {
   filFoodImages,
   apluzImages,
@@ -20,66 +21,63 @@ export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
 return (
     <>
-    <section id='home' className="flex flex-col md:flex-row h-screen w-full bg-gradient-to-br from-gray-900 via-gray-950 to-black">
-        {/* Left Side */}
-        <div className="flex-1 text-white px-10 flex flex-col justify-center space-y-8 relative overflow-hidden h-1/2 md:h-full">
-            {/* Decorative Tech Blobs */}
-            <div className="absolute -top-16 -left-16 w-72 h-72 bg-cyan-600 opacity-20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 right-0 w-56 h-56 bg-blue-500 opacity-20 rounded-full blur-2xl animate-pulse"></div>
+    <section id="home"  className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+        <div className="absolute -top-16 -left-16 w-72 h-72 bg-cyan-600 opacity-20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-0 right-0 w-56 h-56 bg-blue-500 opacity-20 rounded-full blur-2xl animate-pulse"></div>
+    {/* Interactive Canvas Background */}
+    <div className="absolute inset-0 z-0 pointer-events-auto">
+        <ComputersCanvas />
+    </div>
 
-            {/* Content */}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black px-5 py-2 rounded-full w-fit font-mono font-extrabold shadow-lg text-lg animate-bounce flex items-center gap-2">
-                <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-                </svg>
-                Hi! I'm Edward Shildon Tenchavez
-            </span>
-            <h1 className="text-5xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
-            {'<'}
-            <Typewriter
-                words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
-                loop={0}
-                cursor
-                cursorStyle="_"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1500}
-            />
-            {'/> Web Developer'}
-            </h1>
-            <p className="text-gray-300 max-w-lg text-lg font-mono font-medium drop-shadow gap-2">
-                Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
-            </p>
-            <div className="flex flex-wrap gap-4">
-                <button onClick={scrollToFooter} className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
-                   <FontAwesomeIcon icon={faPlus} size="1x"/>
-                    Hire Me
-                </button>
-                <button onClick={handleDownload} className="border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
-                    <FontAwesomeIcon icon={faDownload} size="1x"/>
-                    Download Resume
-                </button>
-            </div>
-            {/* Tech Stack Icons */}
-            <div className="flex space-x-4 pt-4">
-                <FontAwesomeIcon icon={faReact} size="2x"/>
-                <FontAwesomeIcon icon={faNode} size="2x"/>
-                <FontAwesomeIcon icon={faJs} size="2x"/>
-                <FontAwesomeIcon icon={faBootstrap} size="2x"/>
-                <FontAwesomeIcon icon={faLaravel} size="2x"/>
-                <FontAwesomeIcon icon={faGithub} size="2x"/>
-                <FontAwesomeIcon icon={faDatabase} size="2x"/>
-            </div>
+    {/* Content above the canvas */}
+    <div className="relative z-10 flex flex-col justify-center h-full px-10 text-white space-y-8 pointer-events-none">
+        <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black px-5 py-2 rounded-full w-fit font-mono font-extrabold shadow-lg text-lg animate-bounce flex items-center gap-2">
+        <svg className="w-6 h-6 text-black" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+        </svg>
+        Hi! I'm Edward Shildon Tenchavez
+        </span>
+
+        <h1 className="text-5xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
+        {'<'}
+        <Typewriter
+            words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
+            loop={0}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+        />
+        {'/> Web Developer'}
+        </h1>
+
+        <p className="text-gray-300 max-w-lg text-lg font-mono font-medium drop-shadow gap-2">
+        Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+        <button onClick={scrollToFooter} className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
+            <FontAwesomeIcon icon={faPlus} size="1x" />
+            Hire Me
+        </button>
+        <button onClick={handleDownload} className="border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
+            <FontAwesomeIcon icon={faDownload} size="1x" />
+            Download Resume
+        </button>
         </div>
 
-    {/* Right Side */}
-        <div className="flex-1 relative overflow-hidden flex items-center justify-center h-1/2 md:h-full">
-            <img
-                src="image/right.png"
-                alt="Right Side"
-                className="w-full h-full object-contain md:object-cover max-h-full"
-            />
+        {/* Tech Stack Icons */}
+        <div className="flex space-x-4 pt-4">
+        <FontAwesomeIcon icon={faReact} size="2x" />
+        <FontAwesomeIcon icon={faNode} size="2x" />
+        <FontAwesomeIcon icon={faJs} size="2x" />
+        <FontAwesomeIcon icon={faBootstrap} size="2x" />
+        <FontAwesomeIcon icon={faLaravel} size="2x" />
+        <FontAwesomeIcon icon={faGithub} size="2x" />
+        <FontAwesomeIcon icon={faDatabase} size="2x" />
         </div>
+    </div>
     </section>
 
     <section id="about" className="min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
