@@ -12,12 +12,12 @@ export default function Footer() {
         <div className="space-y-5 text-center md:text-left bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-2xl shadow-2xl p-8 border-2 border-cyan-700/30 relative">
           <h4 className="text-2xl md:text-3xl font-extrabold font-mono tracking-wide mb-2 text-cyan-400 drop-shadow-lg">Contact Information</h4>
           <div className="font-mono text-base space-y-3">
-            <div className="flex items-center justify-center md:justify-start gap-3">
+            <div className="flex items-center justify-center md:justify-start gap-2">
               <FontAwesomeIcon icon={faPhone} />
               <span className="font-semibold text-cyan-200">Phone:</span>
               <a href="tel:+639156843668" className="hover:underline hover:text-cyan-400 transition-colors">+63 915-684-3668</a>
             </div>
-            <div className="flex items-center justify-center md:justify-start gap-3">
+            <div className="flex items-center justify-center md:justify-start gap-2">
               <FontAwesomeIcon icon={faEnvelope}/>
               <span className="font-semibold text-cyan-200">Email:</span>
               <a href="mailto:edwardshildon081@gmail.com" className="hover:underline hover:text-cyan-400 transition-colors">edwardshildon081@gmail.com</a>
