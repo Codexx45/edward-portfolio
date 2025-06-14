@@ -1,3 +1,5 @@
+import { faMailForward, faPhone } from "@fortawesome/free-solid-svg-icons";
+
 export default function Footer() {
   return (
     <footer  id="contact" className="bg-gradient-to-br from-gray-900 via-gray-950 to-black text-white py-14 px-4 shadow-inner relative overflow-hidden">
@@ -10,23 +12,14 @@ export default function Footer() {
           <h4 className="text-2xl md:text-3xl font-extrabold font-mono tracking-wide mb-2 text-cyan-400 drop-shadow-lg">Contact Information</h4>
           <div className="font-mono text-base space-y-3">
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-cyan-600/30">
-                <svg className="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5.75A2.75 2.75 0 015.75 3h12.5A2.75 2.75 0 0121 5.75v12.5A2.75 2.75 0 0118.25 21H5.75A2.75 2.75 0 013 18.25V5.75z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7h8M8 11h8M8 15h4" />
-                </svg>
-              </span>
+              <FontAwesomeIcon icon={faPhone} size="2x" />
               <span className="font-semibold text-cyan-200">Phone:</span>
-              <a href="tel:+639123456789" className="hover:underline hover:text-cyan-400 transition-colors">+63 915-684-3668</a>
+              <a href="tel:+639156843668" className="hover:underline hover:text-cyan-400 transition-colors">+63 915-684-3668</a>
             </div>
             <div className="flex items-center justify-center md:justify-start gap-3">
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-cyan-600/30">
-                <svg className="w-5 h-5 text-cyan-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 12H8m0 0l4-4m-4 4l4 4" />
-                </svg>
-              </span>
+              <FontAwesomeIcon icon={faMailForward} size="2x" />
               <span className="font-semibold text-cyan-200">Email:</span>
-              <a href="mailto:your@email.com" className="hover:underline hover:text-cyan-400 transition-colors">edwardshildon081@gmail.com</a>
+              <a href="mailto:edwardshildon081@gmail.com" className="hover:underline hover:text-cyan-400 transition-colors">edwardshildon081@gmail.com</a>
             </div>
           </div>
         </div>
