@@ -39,7 +39,7 @@ return (
         Hi! I'm Edward Shildon Tenchavez
         </span>
 
-        <h1 className="text-xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
+        <h1 className="text-2xl md:text-6xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
         {'<'}
         <Typewriter
             words={['Freelance', 'Full-Stack', 'React', 'Laravel']}
