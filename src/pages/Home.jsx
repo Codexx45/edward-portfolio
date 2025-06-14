@@ -26,7 +26,7 @@ return (
         <div className="absolute -top-16 -left-16 w-72 h-72 bg-cyan-600 opacity-20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-0 right-0 w-56 h-56 bg-blue-500 opacity-20 rounded-full blur-2xl animate-pulse"></div>
     {/* Interactive Canvas Background */}
-    <div className="absolute inset-0 z-0 pointer-events-auto md:pointer-events-none">
+    <div className="absolute inset-0 z-0 pointer-events-auto sm:pointer-events-none">
         <ComputersCanvas />
     </div>
 
