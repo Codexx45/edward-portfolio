@@ -69,7 +69,7 @@ return (
         </div>
 
         {/* Tech Stack Icons */}
-        <div className="flex space-x-4 pt-4">
+        <div className="flex flex-wrap space-x-4 pt-4">
         <FontAwesomeIcon icon={faReact} size="2x" />
         <FontAwesomeIcon icon={faNode} size="2x" />
         <FontAwesomeIcon icon={faJs} size="2x" />
