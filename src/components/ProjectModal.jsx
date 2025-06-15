@@ -13,7 +13,7 @@ export default function ProjectModal({ images, isOpen, onClose }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
       {/* Decorative Blobs */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-3xl p-6 w-full max-w-7xl sm:max-w-8xl shadow-2xl border-2 border-cyan-700/30 flex flex-col items-center">
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-3xl p-6 w-full max-w-l sm:max-w-8xl shadow-2xl border-2 border-cyan-700/30 flex flex-col items-center">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-sm sm:text-lg text-cyan-400 hover:text-red-500 transition-colors bg-white/10 rounded-full p-2 shadow-lg"
@@ -21,7 +21,7 @@ export default function ProjectModal({ images, isOpen, onClose }) {
         >
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <div className="flex items-center justify-center w-full mt-4 gap-4">
+        <div className="flex items-center justify-center w-full mt-4 gap-1">
           <button
             onClick={prevSlide}
             className="text-sm sm:text-lg text-cyan-400 hover:text-white bg-cyan-700/30 rounded-full p-3 transition-colors shadow-md"
@@ -33,7 +33,7 @@ export default function ProjectModal({ images, isOpen, onClose }) {
             <img
               src={images[current]}
               alt={`Slide ${current + 1}`}
-              className="max-h-[75vh] max-w-[80vw] object-contain rounded-2xl border-2 border-cyan-700/30 shadow-lg bg-black/40"
+              className="max-h-[85vh] max-w-[85vw] object-contain rounded-2xl border-2 border-cyan-700/30 shadow-lg bg-black/40"
             />
           </div>
           <button
@@ -44,7 +44,7 @@ export default function ProjectModal({ images, isOpen, onClose }) {
             <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
-        <p className="text-center text-cyan-200 mt-4 font-mono text-sm">
+        <p className="text-center text-cyan-200 mt-6 font-mono text-sm">
           Image <span className="font-bold">{current + 1}</span> of {images.length}
         </p>
       </div>
