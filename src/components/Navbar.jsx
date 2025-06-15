@@ -26,6 +26,7 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-8">
           <li><a href="#home" className="hover:text-cyan-200 transition-colors duration-200">{`Home`}</a></li>
           <li><a href="#about" className="hover:text-cyan-200 transition-colors duration-200">{`AboutMe`}</a></li>
+           <li><a href="#skills" className="hover:text-cyan-200 transition-colors duration-200">{`Skills`}</a></li>
           <li><a href="#services" className="hover:text-cyan-200 transition-colors duration-200">{`Services`}</a></li>
           <li><a href="#certificates" className="hover:text-cyan-200 transition-colors duration-200">{`Certificates`}</a></li>
           <li><a href="#projects" className="hover:text-cyan-200 transition-colors duration-200">{`Projects`}</a></li>
@@ -36,6 +37,7 @@ export default function Navbar() {
         <ul className="md:hidden flex flex-col space-y-4 mt-4 px-4 py-4 text-center rounded shadow font-mono">
           <li><a href="#home" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Home`}</a></li>
           <li><a href="#about" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`AboutMe`}</a></li>
+          <li><a href="#skills" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Skills`}</a></li>
           <li><a href="#services" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Services`}</a></li>
           <li><a href="#certificates" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Certificates`}</a></li>
           <li><a href="#projects" className="hover:text-cyan-900" onClick={() => setMenuOpen(false)}>{`Projects`}</a></li>

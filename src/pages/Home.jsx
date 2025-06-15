@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import ProjectModal from '../components/ProjectModal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faDatabase, faDownload, faPlus} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faJava, faJs, faNode, faPython, faReact, faRProject } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight, faDownload, faPlus} from '@fortawesome/free-solid-svg-icons';
+import { faGitAlt, faJava, faJs, faNode, faPhp, faPython, faReact, faRProject } from '@fortawesome/free-brands-svg-icons';
 import { faBootstrap } from '@fortawesome/free-brands-svg-icons/faBootstrap';
 import { faLaravel } from '@fortawesome/free-brands-svg-icons/faLaravel';
 import ComputersCanvas from "../components/canvas/Computers";
 import StarsCanvas from "../components/canvas/Stars";
+
 import {
   filFoodImages,
   apluzImages,
@@ -17,6 +18,8 @@ import {
 } from "../data/projectImages";
 
 import { handleDownload, scrollToFooter } from "../utils/helpers";
+import { TechIcon, TailwindSVG, ChatGPTSVG } from "../components/icon";
+import { faFlutter } from '@fortawesome/free-brands-svg-icons/faFlutter';
 
 export default function Home() {
   const [activeModal, setActiveModal] = useState(null);
@@ -25,59 +28,45 @@ return (
     <section id="home"  className="relative h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 via-gray-950 to-black">
         <div className="absolute -top-16 -left-16 w-72 h-72 bg-cyan-600 opacity-20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute bottom-0 right-0 w-56 h-56 bg-blue-500 opacity-20 rounded-full blur-2xl animate-pulse"></div>
-    {/* Interactive Canvas Background */}
-    <div className="absolute inset-0 z-0">
-        <ComputersCanvas />
-    </div>
-
-    {/* Content above the canvas */}
-    <div className="relative z-10 flex flex-col justify-center h-full px-10 text-white space-y-8 pointer-events-auto sm:pointer-events-none">
-        <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black px-5 py-2 rounded-full w-fit font-mono font-extrabold shadow-lg text-l md:text-xl animate-bounce flex items-center gap-2">
-        Hi! I'm Edward
-        </span>
-
-        <h1 className="text-xl md:text-3xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
-        {'I do '}
-        <Typewriter
-            words={['Web Development', 'UI/UX Design', 'System Development']}
-            loop={0}
-            cursor
-            cursorStyle="_"
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1500}
-        />
-        </h1>
-
-        <p className="text-gray-300 max-w-lg text-lg font-mono font-medium drop-shadow gap-2">
-        Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
-        </p>
-
-        <div className="flex flex-wrap gap-4 pointer-events-auto">
-        <button onClick={scrollToFooter} className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
-            <FontAwesomeIcon icon={faPlus} size="1x" />
-            Hire Me
-        </button>
-        <button onClick={handleDownload} className="pointer-events-auto border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
-            <FontAwesomeIcon icon={faDownload} size="1x" />
-            Download Resume
-        </button>
+        {/* Interactive Canvas Background */}
+        <div className="absolute inset-0 z-0">
+            <ComputersCanvas />
         </div>
 
-        {/* Tech Stack Icons */}
-        <div className="flex flex-wrap space-x-4 pt-4">
-        <FontAwesomeIcon icon={faReact} size="2x" />
-        <FontAwesomeIcon icon={faNode} size="2x" />
-        <FontAwesomeIcon icon={faJs} size="2x" />
-        <FontAwesomeIcon icon={faBootstrap} size="2x" />
-        <FontAwesomeIcon icon={faLaravel} size="2x" />
-        <FontAwesomeIcon icon={faGithub} size="2x" />
-        <FontAwesomeIcon icon={faDatabase} size="2x" />
-        <FontAwesomeIcon icon={faPython} size="2x" />
-        <FontAwesomeIcon icon={faRProject} size="2x" />
-        <FontAwesomeIcon icon={faJava} size="2x" />
+        {/* Content above the canvas */}
+        <div className="relative z-10 flex flex-col justify-center h-full px-10 text-white space-y-8 pointer-events-auto sm:pointer-events-none">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 text-black px-5 py-2 rounded-full w-fit font-mono font-extrabold shadow-lg text-l md:text-xl animate-bounce flex items-center gap-2">
+            Hi! I'm Edward
+            </span>
+
+            <h1 className="text-xl md:text-3xl font-extrabold font-mono text-cyan-400 drop-shadow-lg">
+            {'I do '}
+            <Typewriter
+                words={['Web Development', 'UI/UX Design', 'System Development']}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1500}
+            />
+            </h1>
+
+            <p className="text-gray-300 max-w-lg text-lg font-mono font-medium drop-shadow gap-2">
+            Coding the future, one <span className="text-cyan-400">line</span> at a time. Passionate about <span className="text-purple-400">modern web tech</span>.
+            </p>
+
+            <div className="flex flex-wrap gap-4 pointer-events-auto">
+                <button onClick={scrollToFooter} className="bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-600 text-white py-2 px-8 rounded-full font-bold shadow-lg hover:scale-105 transition-transform duration-200 font-mono flex items-center gap-2">
+                    <FontAwesomeIcon icon={faPlus} size="1x" />
+                    Hire Me
+                </button>
+                <button onClick={handleDownload} className="pointer-events-auto border-2 border-cyan-400 text-white py-2 px-8 rounded-full font-bold hover:bg-gray-800 hover:border-blue-600 transition-colors duration-200 font-mono flex items-center gap-2">
+                    <FontAwesomeIcon icon={faDownload} size="1x" />
+                    Download Resume
+                </button>
+            </div>
         </div>
-    </div>
     </section>
 
     <section id="about" className="relative min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
@@ -94,47 +83,103 @@ return (
 
             {/* Right Side: About Me Card */}
             <div className="flex-1 flex flex-col items-start justify-center space-y-6 bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-3xl shadow-2xl p-10 border-2 border-cyan-700/30 relative overflow-hidden">
-            {/* Decorative Blobs */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-600 opacity-20 rounded-full blur-2xl animate-pulse"></div>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500 opacity-20 rounded-full blur-xl animate-pulse"></div>
-            
-            <h2 className="text-4xl md:text-5xl font-extrabold font-mono text-cyan-400 drop-shadow-lg z-10">
-                About Me
-            </h2>
-            
-            <p className="text-gray-300 text-lg leading-relaxed font-mono z-10">
-                I'm <span className="text-cyan-400 font-bold">Edward Shildon Tenchavez</span>, a dedicated 
-                <span className="text-indigo-400"> Full-Stack Web Developer</span> passionate about building 
-                responsive, high-performance web applications. I studied <span className="text-cyan-300 font-semibold">BS Computer Science</span> 
-                at the <span className="text-cyan-300 font-semibold">University of Mindanao</span>, where I built a strong foundation in modern web technologies.
-                I specialize in JavaScript, React, Node.js, Laravel, PHP, Bootstrap, Tailwind CSS, MySQL, and SQLite—transforming ideas into clean, efficient, and scalable code. 
-                I also utilize Python and RStudio for statistical analysis and data-driven development, 
-                bridging the gap between software engineering and data science.
-            </p>
+                {/* Decorative Blobs */}
+                <div className="absolute -top-10 -right-10 w-40 h-40 bg-cyan-600 opacity-20 rounded-full blur-2xl animate-pulse"></div>
+                <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500 opacity-20 rounded-full blur-xl animate-pulse"></div>
+                
+                <h2 className="text-4xl md:text-5xl font-extrabold font-mono text-cyan-400 drop-shadow-lg z-10">
+                    About Me
+                </h2>
+                
+                <p className="text-gray-300 text-lg leading-relaxed font-mono z-10">
+                    I'm <span className="text-cyan-400 font-bold">Edward Shildon Tenchavez</span>, a dedicated 
+                    <span className="text-indigo-400"> Full-Stack Web Developer</span> passionate about building 
+                    responsive, high-performance web applications. I studied <span className="text-cyan-300 font-semibold">BS Computer Science</span> 
+                    at the <span className="text-cyan-300 font-semibold">University of Mindanao</span>, where I built a strong foundation in modern web technologies.
+                    I specialize in JavaScript, React, Node.js, Laravel, PHP, Bootstrap, Tailwind CSS, MySQL, and SQLite—transforming ideas into clean, efficient, and scalable code. 
+                    I also utilize Python and RStudio for statistical analysis and data-driven development, 
+                    bridging the gap between software engineering and data science.
+                </p>
 
-            <p className="text-gray-400 text-md font-mono z-10">
-                My journey in tech is driven by curiosity, creativity, and a constant desire to grow. I enjoy turning complex challenges into elegant, functional solutions.
-            </p>
-
-            <div className="flex flex-wrap gap-3 pt-2 z-10">
-                <span className="bg-yellow-500 text-black px-4 py-1 rounded-full text-sm font-mono shadow">JavaScript</span>
-                <span className="bg-sky-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">React</span>
-                <span className="bg-emerald-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Node.js</span>
-                <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Bootstrap</span>
-                <span className="bg-cyan-500 text-black px-4 py-1 rounded-full text-sm font-mono shadow">Tailwind</span>
-                <span className="bg-rose-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Laravel</span>
-                <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-mono shadow">PHP</span>
-                <span className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">MySQL</span>
-                <span className="bg-zinc-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">SQLite</span>
-                <span className="bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-mono shadow">JAVA</span>
-                <span className="bg-blue-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">Python</span>
-                <span className="bg-pink-700 text-white px-4 py-1 rounded-full text-sm font-mono shadow">R-project</span>
+                <p className="text-gray-400 text-md font-mono z-10">
+                    My journey in tech is driven by curiosity, creativity, and a constant desire to grow. I enjoy turning complex challenges into elegant, functional solutions.
+                </p>
             </div>
+        </div>
+    </section>
+
+    <section id="skills" className="min-h-screen w-full bg-gray-950 text-white px-6 md:px-16 py-20">
+        <div className="max-w-6xl mx-auto text-center space-y-12">
+            <h2 className="text-4xl font-bold text-cyan-400 font-mono">Tech Stack</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto font-mono">
+            My core technologies and tools for building modern, scalable applications.
+            </p>
+
+            {/* Frontend */}
+            <h3 className="text-2xl font-bold text-white font-mono pt-10">Frontend</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center pt-6">
+            <TechIcon icon={faJs} label="JavaScript" color="text-yellow-400" />
+            <TechIcon icon={faReact} label="React" color="text-sky-400" />
+            <TechIcon icon={faBootstrap} label="Bootstrap" color="text-purple-500" />
+            <TechIcon svg={TailwindSVG} label="Tailwind" />
+            </div>
+
+            {/* Backend */}
+            <h3 className="text-2xl font-bold text-white font-mono pt-10">Backend</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center pt-6">
+            <TechIcon icon={faLaravel} label="Laravel" color="text-rose-600" />
+            <TechIcon icon={faPhp} label="PHP" color="text-indigo-500" />
+            <TechIcon icon={faNode} label="Node.js" color="text-green-500" />
+            <TechIcon icon={faPython} label="Python" color="text-blue-500" />
+            <TechIcon icon={faJava} label="Java" color="text-orange-500" />
+            <TechIcon svg={
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-plain-wordmark.svg" 
+            className='w-14 h-14/2' />
+            } 
+            label="Ruby on Rails" 
+            color="text-blue-400" />
+            <TechIcon icon={faFlutter} label="Flutter" color="text-sky-500"/>
+            <TechIcon svg={
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" className='w-14 h-15'/>
+            } 
+            label="C++" 
+            color="text-blue-400" />
+            </div>
+
+            {/* Database */}
+            <h3 className="text-2xl font-bold text-white font-mono pt-10">Database</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center pt-6">
+            <TechIcon svg={<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" className='w-14 h-14/2' />} 
+            label="MySQL" 
+            color="text-blue-400" />
+            <TechIcon svg={
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" className='w-14 h-15' />} 
+            label="SQLite" 
+            color="text-blue-400" />
+            <TechIcon
+            svg={<i className="devicon-firebase-plain colored text-6xl"></i>}
+            label="Firebase"
+            color="text-zinc-400"
+            />
+            </div>
+
+            {/* Others / Tools */}
+            <h3 className="text-2xl font-bold text-white font-mono pt-10">Tools & Others</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 justify-items-center pt-6">
+            <TechIcon icon={faGitAlt} label="Git" color="text-[#F1502F]" />
+            <TechIcon icon={faRProject} label="R" color="text-pink-500" />
+            <TechIcon svg={ChatGPTSVG} label="ChatGPT" color="text-green-500" />
+            <TechIcon svg={
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg" className='w-14 h-15'/>
+            } 
+            label="Arduino" 
+            color="text-blue-400" />
             </div>
         </div>
     </section>
     
-    <section id="services" className="min-h-screen w-full bg-gray-950 text-white px-6 md:px-16 py-20">
+    <section id="services" className="relative min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
+        <StarsCanvas />
         <div className="max-w-6xl mx-auto text-center space-y-12">
             <h2 className="text-4xl font-bold text-cyan-400 font-mono">Services I Offer</h2>
             <p className="text-gray-400 max-w-2xl mx-auto font-mono">
