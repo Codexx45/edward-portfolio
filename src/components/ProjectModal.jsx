@@ -38,7 +38,7 @@ export default function ProjectModal({ images, isOpen, onClose }) {
           </div>
           <button
             onClick={nextSlide}
-            className="text-m sm:text-lg text-cyan-400 hover:text-white bg-cyan-700/30 rounded-full p-3 transition-colors shadow-md"
+            className="text-sm sm:text-lg text-cyan-400 hover:text-white bg-cyan-700/30 rounded-full p-3 transition-colors shadow-md"
             aria-label="Next image"
           >
             <FontAwesomeIcon icon={faChevronRight} />
