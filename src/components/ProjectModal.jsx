@@ -13,7 +13,7 @@ export default function ProjectModal({ images, isOpen, onClose }) {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex justify-center items-center">
       {/* Decorative Blobs */}
-      <div className="relative bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-3xl p-6 w-full max-w-8xl sm:max-w-7xl shadow-2xl border-2 border-cyan-700/30 flex flex-col items-center">
+      <div className="relative bg-gradient-to-br from-gray-900 via-gray-950 to-black rounded-3xl p-6 w-full max-w-7xl sm:max-w-8xl shadow-2xl border-2 border-cyan-700/30 flex flex-col items-center">
         <button
           onClick={onClose}
           className="absolute top-4 right-4 text-sm sm:text-lg text-cyan-400 hover:text-red-500 transition-colors bg-white/10 rounded-full p-2 shadow-lg"
