@@ -37,11 +37,6 @@ export default function About() {
             label="Ruby on Rails" 
             color="text-blue-400" />
             <TechIcon icon={faFlutter} label="Flutter" color="text-sky-500"/>
-            <TechIcon svg={
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" className='w-14 h-15'/>
-            } 
-            label="C++" 
-            color="text-blue-400" />
             </div>
 
             {/* Database */}
