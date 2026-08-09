@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="flex items-center justify-center md:justify-start gap-2">
               <FontAwesomeIcon icon={faEnvelope}/>
               <span className="font-semibold text-cyan-200">Email:</span>
-              <a href="mailto:edwardshildon081@gmail.com" className="hover:underline hover:text-cyan-400 transition-colors">edwardshildon081@gmail.com</a>
+              <a href="mailto:edwardtenchavez@gmail.com" className="hover:underline hover:text-cyan-400 transition-colors">edwardtenchavez@gmail.com</a>
             </div>
           </div>
         </div>
