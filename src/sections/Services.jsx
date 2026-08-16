@@ -1,9 +1,13 @@
-import StarsCanvas from '../components/canvas/Stars';
+import React, { Suspense, lazy } from 'react';
+
+const StarsCanvas = lazy(() => import('../components/canvas/Stars'));
 
 export default function About() {
     return (
         <section id="services" className="relative min-h-screen w-full bg-black text-white px-6 md:px-16 py-20">
-            <StarsCanvas />
+            <Suspense fallback={null}>
+                <StarsCanvas />
+            </Suspense>
             <div className="max-w-6xl mx-auto text-center space-y-12">
                 <h2 className="text-4xl font-bold text-cyan-400 font-mono">Services I Offer</h2>
                 <p className="text-gray-400 max-w-2xl mx-auto font-mono">
