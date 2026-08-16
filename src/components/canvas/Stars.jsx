@@ -1,26 +1,43 @@
-import { Suspense, useRef } from "react";
+import { Suspense, useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 import "../../index.css";
 
-const NUM_STARS = 1500; // Adjust the number of stars as needed
+// WebGL availability check for headless crawlers like Googlebot
+const isWebGLAvailable = () => {
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(
+      window.WebGLRenderingContext &&
+      (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
+    );
+  } catch {
+    return false;
+  }
+};
 
-const Stars = () => {
-  const ref = useRef({
-    rotation: { x: 0, y: 0, z: Math.PI / 4 },
-  });
+const NUM_STARS = 1500;
 
-  const sphere = random.inSphere(new Float32Array(NUM_STARS * 3), { radius: 1.2 });
+const Stars = (props) => {
+  // Let Three.js bind the Points group directly to the ref
+  const ref = useRef();
+
+  // Generate sphere positions once (memoized by default outside render)
+  const [sphere] = useState(() =>
+    random.inSphere(new Float32Array(NUM_STARS * 3), { radius: 1.2 })
+  );
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+    }
   });
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
-      <Points ref={ref} positions={sphere} stride={3} frustumCulled>
+      <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
           color="#f272c8"
@@ -34,30 +51,35 @@ const Stars = () => {
 };
 
 const StarsCanvas = () => {
+  const [hasWebGL, setHasWebGL] = useState(true);
+
+  useEffect(() => {
+    if (!isWebGLAvailable()) {
+      setHasWebGL(false);
+    }
+  }, []);
+
+  // Return null if WebGL is unavailable (e.g. Googlebot) so it doesn't crash the page
+  if (!hasWebGL) return null;
+
   return (
-    <Canvas
-      camera={{ position: [0, 0, 1] }} // Adjust camera position as needed
+    <div
       style={{
-        position: 'absolute',
+        position: "absolute",
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0, // Ensure it's behind other content
+        width: "100%",
+        height: "100%",
+        zIndex: 0,
       }}
     >
-      <Suspense fallback={null}>
-        <Stars
-          radius={50} // Adjust radius as needed
-          depth={50} // Adjust depth as needed
-          count={5000} // Adjust count for more/fewer stars
-          factor={4} // Adjust size of stars
-          saturation={0}
-          fade
-          speed={1}
-        />
-      </Suspense>
-    </Canvas>
+      <Canvas camera={{ position: [0, 0, 1] }}>
+        <Suspense fallback={null}>
+          <Stars />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 
