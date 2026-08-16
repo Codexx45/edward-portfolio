@@ -1,27 +1,39 @@
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './sections/Home';
-import About from './sections/About';
 import Skills from './sections/Skills';
-import Services from './sections/Services';
 import Certificates from './sections/Certificates';
-import Projects from './sections/Projects';
-import './App.css'
+import './App.css';
+
+// 1. Lazy load sections that contain Three.js or heavy 3D canvases
+const Home = lazy(() => import('./sections/Home'));
+const About = lazy(() => import('./sections/About'));
+const Services = lazy(() => import('./sections/Services'));
+const Projects = lazy(() => import('./sections/Projects'));
 
 function App() {
-
   return (
     <>
       <Navbar />
-      <Home />
-      <About />
+      
+      {/* 2. Wrap lazy-loaded components in Suspense with a lightweight fallback */}
+      <Suspense fallback={<div className="min-h-screen bg-[#050816]" />}>
+        <Home />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-screen bg-[#050816]" />}>
+        <About />
+      </Suspense>
       <Skills />
-      <Services />
+      <Suspense fallback={<div className="min-h-screen bg-[#050816]" />}>
+        <Services />
+      </Suspense>
       <Certificates />
-      <Projects />
+      <Suspense fallback={<div className="min-h-screen bg-[#050816]" />}>
+        <Projects />
+      </Suspense>
       <Footer />
     </>
   );
 }
 
-export default App
+export default App;
